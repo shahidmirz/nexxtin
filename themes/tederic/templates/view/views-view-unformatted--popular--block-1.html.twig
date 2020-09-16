@@ -1,0 +1,10 @@
+<div id="home" class="tab-pane fade in active">
+  {% for key,row in rows %}
+    <div class="col-md-6 col-sm-12 col-xs-12">
+        <a {% if key == 3 %} class= "special" {% endif %} href="#">
+            <h3>{{row.content['#row']._entity.title[0].value}}</h3>
+             <small>{%if key==3%}<span>special</span>{%endif%} {{row.content['#row']._entity.created[0].value|date('U')|format_date('short_mdyyyy') }}</small>
+        </a>
+    </div>
+{% endfor %}
+</div>

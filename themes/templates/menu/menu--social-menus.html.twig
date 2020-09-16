@@ -1,0 +1,21 @@
+{% if items %}
+    <ul class="social-list">
+    {% for item in items %}
+      {%
+        set item_classes = item.url.getOption('container_attributes').class | split(" ")
+      %}
+      {%
+        set item_classes = [
+          item.is_expanded and item.below ? 'expanded dropdown',
+          item.in_active_trail ? 'active active-trail',
+          loop.first ? 'first',
+          loop.last ? 'last',
+		      'social-list__item',
+        ]
+      %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a class="social-list__link" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}

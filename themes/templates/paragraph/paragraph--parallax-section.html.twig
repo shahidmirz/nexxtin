@@ -1,0 +1,15 @@
+<section class="page-section" data-scroll-section>
+    <div class="hero-parallax-image">
+        <picture>
+            <source srcset="{{ file_url(content.field_image['#items'].entity.uri.value) }} 640w" media="(orientation: portrait)" alt="">
+            <img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" alt="parallax-image" class="hero-parallax-image__img" data-scroll data-scroll-speed="-2">
+        </picture>
+        <div class="hero-parallax-image__wrap parallax-content">
+            <div class="parallax-content__item" data-scroll data-scroll-speed="3">{{ content.field_letter_1 }}</div>
+            <div class="parallax-content__item" data-scroll data-scroll-speed="7">{{ content.field_letter_2 }}</div>
+        </div>
+    </div>
+</section>
+
+
+

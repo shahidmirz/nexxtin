@@ -1,0 +1,28 @@
+<div class="row">
+   {% for key,row in rows %}
+   {% if key == 0 %}
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <div class="post-box small">
+      <img class="img-responsive" src="{{file_url(row.content['#row']._entity.field_hm_post_img.entity.uri.value)}}">
+      <h3>{{row.content['#row']._entity.title[0].value}}</h3>
+      <ul>
+        <li><i class="fa fa-calendar"></i> 07 May, 2020</li>
+        <li><i class="fa fa-eye"></i>2,343 Visitor</li>
+      </ul>
+    </div>
+  </div>
+   {% else %}
+  <div class="col-md-8 col-sm-12 col-xs-12">
+    <div class="post-box big">
+      <img class="img-responsive" src="{{file_url(row.content['#row']._entity.field_hm_post_img.entity.uri.value)}}">
+      <h3>{{row.content['#row']._entity.title[0].value}}</h3>
+      <p>{{row.content['#row']._entity.field_hm_post_description[0].value}}</p>
+      <ul>
+        <li><i class="fa fa-calendar"></i> 07 May, 2020</li>
+        <li><i class="fa fa-eye"></i>2,343 Visitor</li>
+      </ul>
+    </div>
+  </div>
+   {% endif %}
+   {% endfor %}
+</div>

@@ -1,0 +1,27 @@
+<section class="page-section" data-scroll-section>
+    <div class="entry-summary animate-in" data-component='EntrySummary'>
+        <div class="container">
+            <div class="position-relative">
+                <div class="entry-summary__inner row">
+                    <div class="col-12 offset-md-1 col-md-10">
+                        <div class="entry-summary__pretitle heading heading--sans heading--sm color-petrol">
+                            <a href="#">{{ content.field_pre_text }}</a>
+                        </div>
+                        <h1 class="entry-summary__title">{{ content.field_title|raw }}</h1>
+                    </div>
+                    <div class="col-12 col-md-7 offset-md-1">
+                        <div class="entry-summary__content">{{ content.field_content }}</div>
+                    </div>
+                </div>
+                <button class="entry-summary__scroll-indicator scroll-indicator animate-in" data-component='ScrollIndicator' data-scroll-past=".hero-parallax-image" data-scroll-past-type="absolute">
+                    <span class="scroll-indicator__title">
+                        Continue
+                    </span>
+                    <svg class="scroll-indicator__arrow">
+                        <use xlink:href="#icon-angle-right" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+type: theme
+base theme: false
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+name: 'tederic'
+description: 'A custom theme built for tederic'
+package: 'tederic'
+
+regions:
+  logo: 'Site Logo'
+  navigation: 'Navigation'
+  content: 'Content'
+  product_pagination: 'Product Pagination'
+  footer_left: 'Footer Left'
+  footer_right: 'Footer Right'
+  copyright: 'Copyright'
+  hidden: 'Hidden Region'
+
+libraries:
+  - 'tederic/framework'

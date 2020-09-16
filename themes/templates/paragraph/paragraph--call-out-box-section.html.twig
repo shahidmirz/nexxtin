@@ -1,0 +1,24 @@
+<section class="page-section" data-scroll-section>	
+	<div class="callout-box callout-box--dark animate-in" data-component='CalloutBox'>
+	    <div class="container">
+	        <div class="row">
+	            <div class="offset-lg-1 col-lg-10">
+	                <div class="callout-box__inner">
+	                    <div class="callout-box__title heading-underlined st animate-in" data-component="HeadingUnderlined">
+	                        <div class="st__line">
+	                            {{ content.field_title }}
+	                            <div class="heading-underlined__underline"></div>
+	                        </div>
+	                    </div>
+	                    <div class="callout-box__content base-text">
+	                        {{ content.field_content }}
+	                    </div>
+	                    <a class="btn btn--primary btn--light-grey btn--sm-type btn--md" href="{{ content.field_button.0['#url'] }}" target="_self">
+	                        {{ content.field_button.0['#title']}}
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>

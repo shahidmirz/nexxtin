@@ -1,0 +1,10 @@
+<?php
+
+
+function tederic_preprocess_field(&$variables) {
+    
+    foreach($variables['items'] as $idx => $item) {
+        $variables['items'][$idx]['content']['#paragraph']->index = $idx;
+    }
+    
+}

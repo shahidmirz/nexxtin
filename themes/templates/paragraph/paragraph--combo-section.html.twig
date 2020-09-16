@@ -1,0 +1,39 @@
+<section class="page-section" data-scroll-section>
+    <div class="combo-image combo-image--tabs" data-component='ComboImage' data-offset='20%' id="{{content.field_combo_id|render|striptags|trim}}">
+        <div class="row no-gutters">
+            <div class="col-md-7">
+                <div class="tabs tabs--fluid tabs--the-{{content.field_combo_id|render|striptags|trim}} tabs--nav-bottom tabs--nav-light" data-component='Tabs'>
+                    <div class="tabs__inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="nav nav-pills justify-content-center nav-pills--show" role="tablist">
+                                        {% for item in content.field_combo_images['#items'] %}
+                                            <li class="nav-item">
+                                                <a class="nav-link {% if loop.index == 1 %} active {% endif %}" id="tab-#the-{{content.field_combo_id|render|striptags|trim}}-{{loop.index-1}}" href="#the-{{content.field_combo_id|render|striptags|trim}}-{{loop.index-1}}" role="tab" aria-controls="#the-{{content.field_combo_id|render|striptags|trim}}-{{loop.index-1}}" aria-selected="false"><span></span></a>
+                                            </li> 
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content"></div>
+                </div>
+                {{ content.field_combo_images }}
+            </div>
+            <div class="col-md-5 combo-image__tab-content">
+                <div class="combo-image__content" data-scroll data-scroll-speed="1.5">
+                    <div class="hover-grid__title heading-underlined st animate-in" data-component="HeadingUnderlined">
+                        <div class="st__line">
+                            {{ content.field_title }}
+                            <div class="heading-underlined__underline"></div>
+                        </div>
+                    </div>
+                    <div class="base-text">{{ content.field_content|raw }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ content.field_bg_switcher }}
+</section>

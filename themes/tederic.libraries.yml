@@ -1,0 +1,12 @@
+framework:
+  css:
+    theme:
+      css/typekit.css: {}
+      css/main.css: {}
+      css/style.css: {}
+  js:
+    js/jquery-migrate.js: {}
+    js/main.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,22 @@
+<section class="page-section" data-scroll-section>
+	<div class="slider" data-component='Slider'>
+	    <div class="container">
+	        <div class="slider__inner row">
+	            <div class="col-12 order-2 offset-md-1 col-md-6 order-md-1 d-flex flex-column">
+	                <h2 class="slider__title heading heading--md heading--sans--md">{{ content.field_title }}</h2>
+	                <div class="slider__nav content-nav" data-component='ContentNav'>
+	                    <div class="content-nav__inner">
+	                    	{{ content.field_slider_items }}
+	                        <div class="content-nav__bar"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-12 col-md-5 order-md-2">
+	                <div class="slider__gallery" data-component="CustomCursorTrigger" data-controls="#generic-custom-cursor" data-text="SWIPE LEFT">
+	                    {{ content.field_slider_images }}
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>

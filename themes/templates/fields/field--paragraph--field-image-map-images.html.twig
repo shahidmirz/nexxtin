@@ -1,0 +1,12 @@
+{% set image_url = [] %}
+{% for item in items %}
+	{% set iu = file_url(item.content['#item'].entity.uri.value) %}
+	{% set image_url = image_url|merge([iu]) %}
+{% endfor %}
+
+<div class="image-map__gallery backstretch-gallery" data-component='BackstretchGallery' data-images='["{{ image_url | join('","') | raw }}"]' data-paused='1' data-fade='600' style="padding-bottom: 95%"></div>
+<div>
+    <button class="image-map__anchor" style="top: 32.4%; left: 52.7%;"></button>
+    <button class="image-map__anchor" style="top: 66.2%; left: 51.6%;"></button>
+    <button class="image-map__anchor" style="top: 79%; left: 28.5%;"></button>
+</div>

@@ -1,0 +1,42 @@
+
+    <div class="accordion__section accordion__section--tabs" id="typologies">
+        <div class="accordion__title heading--xl heading--sans--md heading--dark text-center">
+            <a href="#accordion__item-2" data-toggle="collapse" class="collapsed">The typologies</a>
+        </div>
+        <div id="accordion__item-2" class="collapse accordion__content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="accordion__content">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade active show" id="outer-pills-0" role="tabpanel" aria-labelledby="pills-0-tab">
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active show" id="inner-pills-0-0" role="tabpanel" aria-labelledby="inner-pills-0-0-tab">
+                                            <div class="row">
+                                                {{ content.field_accordion_inward_tab_row }}
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade " id="inner-pills-0-1" role="tabpanel" aria-labelledby="inner-pills-0-1-tab">
+                                            <div class="row">
+                                                {{ content.field_accordion_outward_tab_row }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="nav nav-pills justify-content-center tab-nav tab-nav--inner" id="tab-nav--inner" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="deco-link deco-link--bottom deco-link--xs deco-link--horizontal active" id="inner-tabbed-content-tab-0" data-toggle="pill" href="#inner-pills-0-0" role="tab" aria-controls="inner-pills-0-0" aria-selected="true">INWARD</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="deco-link deco-link--bottom deco-link--xs deco-link--horizontal " id="inner-tabbed-content-tab-1" data-toggle="pill" href="#inner-pills-0-1" role="tab" aria-controls="inner-pills-0-1" aria-selected="true">OUTWARD</a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

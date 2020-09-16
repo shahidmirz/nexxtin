@@ -1,0 +1,22 @@
+{% if items %}
+    <ul class="nav">
+    {% for item in items %}
+      {%
+        set item_classes = item.url.getOption('container_attributes').class | split(" ")
+      %}
+      {%
+        set item_classes = [
+          item.is_expanded and item.below ? 'expanded dropdown',
+          item.in_active_trail ? 'active active-trail',
+          loop.first ? 'first',
+          loop.last ? 'last',
+		  'page-nav__item',
+		  'nav-item'
+        ]
+      %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+         <a class="page-nav__link nav-link" data-scroll-to-offset="" target="" href="{{ item.url }}">{{ item.title|raw }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}

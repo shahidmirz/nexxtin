@@ -1,0 +1,34 @@
+<div class="tab-pane fade hover-grid animate-in {% if paragraph.loop == 1 %} active in {% endif %}" data-component='HoverGrid' id="{{ content.field_grid_id|render|striptags|trim }}" role="tabpanel" aria-labelledby="tab-{{ content.field_grid_id|render|striptags|trim }}">
+    <div class="container" data-component="HoverGridBackground">
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="hover-grid__header text-center">
+                    <div class="hover-grid__title heading-underlined st animate-in" data-component="HeadingUnderlined">
+                        <div class="st__line">
+                            {{ content.field_title|render|striptags|trim }}
+                            <div class="heading-underlined__underline"></div>
+                        </div>
+                    </div>
+                    <div class="hover-grid__description">
+                        {{ content.field_content|render|striptags|trim }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="hover-grid__label-wrapper">
+                    {% for item in content.field_energy_isothermic_sub_sect['#items'] %}
+                        <a href="#" class="hover-grid__label {% if loop.index == 1 %} is-active {% endif %}">
+                            Level {{ loop.index }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row hover-grid__row">
+            <div class="hover-grid__item-background col-12 col-md-3"></div>
+            {{ content.field_energy_isothermic_sub_sect }}
+        </div>
+    </div>
+</div>

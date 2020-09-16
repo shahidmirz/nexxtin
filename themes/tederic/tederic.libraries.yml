@@ -1,0 +1,13 @@
+framework:
+  css:
+    theme:
+      css/bootstrap.css: {}
+      css/font-awesome.css: {}
+      css/style.css: {}
+  js:
+    js/jquery-1.12.4.js: {}
+    js/bootstrap.min.js: {}
+    js/main.js: {}
+  dependencies:
+    - core/drupal
+    

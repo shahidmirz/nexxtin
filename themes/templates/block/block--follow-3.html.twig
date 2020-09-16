@@ -1,0 +1,12 @@
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <div class="heading heading--sans heading--dark heading--sans--md heading--md text-center">{{ label }}</div>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    <div class="base-text text-center">{{ content }}</div>
+  {% endblock %}
+</div>
+

@@ -1,0 +1,22 @@
+{% if items %}
+    <ul class="product-pagination__list">
+    {% for item in items %}
+      {%
+        set item_classes = item.url.getOption('container_attributes').class | split(" ")
+      %}
+      {%
+        set item_classes = [
+          'product-pagination__item',
+          item.is_expanded and item.below ? 'expanded dropdown',
+          item.in_active_trail ? 'active active-trail',
+          loop.first ? 'first',
+          loop.last ? 'last',
+              'social-list__item',
+        ]
+      %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a class="product-pagination__link heading heading--mega" href="{{ item.url }}">{{ item.title|raw }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+{% endif %}

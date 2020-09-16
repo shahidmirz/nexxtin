@@ -1,0 +1,11 @@
+<div class="col-md-8 col-sm-12 col-xs-12 no-pad">
+  {% for key,row in rows %}
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="pro-box {% if key == 2 %} grey {% endif %}">
+      <img class="img-responsive" src="{{file_url(row.content['#row']._entity.field_image.entity.uri.value)}}">
+      <h3>{{row.content['#row']._entity.field_title[0].value}}</h3>
+      <p>{{row.content['#row']._entity.field_product_description[0].value}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
